@@ -13,6 +13,10 @@ So that I can take my money out of my account
 I want to be able to make a withdrawl
 
 As a Client
+So that I know when transactions were made
+I want to see dates next to my transactions
+
+As a Client
 So that I can check my statement
 I want to be able to print my account statement
 
