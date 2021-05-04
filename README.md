@@ -24,9 +24,6 @@ As a Client
 So I can see the most recent transactions first
 I want the statements to be in reverse chronological order
 
-
-
-
 ----------------------------------
 # Bank tech test
 
