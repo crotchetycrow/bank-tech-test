@@ -1,10 +1,12 @@
+require 'date'
 
 class Transactions
     
-  attr_reader :date
+  attr_reader :date, :credit
 
-  def initialize(date)
-    @date = date
+  def initialize(date, credit)
+    @date = Date.today
+    @credit = credit
   end
 
 end
