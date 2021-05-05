@@ -10,17 +10,17 @@ describe BankAcc do
   describe '#deposit' do
     it 'allows client to deposit money into their account' do
       account
-      account.deposit(100)
-      expect(account.balance).to eq 100
+      account.deposit(100.00)
+      expect(account.balance).to eq 100.00
     end
   end
 
   describe '#withdraw' do
     it 'allows client to withdraw from their account' do
       account
-      account.deposit(100)
-      account.withdraw(45)
-      expect(account.balance).to eq 55
+      account.deposit(100.00)
+      account.withdraw(45.00)
+      expect(account.balance).to eq 55.00
     end
   end
 end

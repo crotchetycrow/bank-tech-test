@@ -1,7 +1,7 @@
 
 class BankAcc
 
-  DEFAULT_BALANCE = 0
+  DEFAULT_BALANCE = 0.00
 
   def initialize
     @balance = DEFAULT_BALANCE

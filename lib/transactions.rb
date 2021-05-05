@@ -12,3 +12,8 @@ class Transactions
   end
 
 end
+
+#The transaction class needs to be linked to the bank account class and have each method link up with one another.
+
+#This will also need to be linked with the statement class, so that when the client calls "print_statement" they will
+#see this in order.
