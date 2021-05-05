@@ -80,6 +80,26 @@ User story 5:
 
   Now my issue is that rb:18 of statement_spec is returning nil...
 
+  IRB test shows that it isn't exactly returning nil:
+      
+      3.0.0 :006 > statement = Statement.new(Date.today, 1000, '', 1000)
+
+      => #<Statement:0x00007faf7d1326b0 @date="2021-05-05", @credit="1000", @debit="", @balance="1000"> 
+
+      3.0.0 :007 > statement.print_statement
+
+      date || credit || debit || balance
+      2021-05-05 || 1000 ||  || 1000
+      => nil 
+
+  Oookay, by adding return instead of puts it has passed my test, but I'm not convinced. I'll check in irb but I might have to alter my test?
+
+  IRB shows that statement.print_statement outputs the following
+
+          date || credit || debit || balance
+          => "2021-05-05 || 1000 ||  || 1000"
+
+  Is this what I want?
 
 User story 1:
 

@@ -12,7 +12,7 @@ class Statement
   
   def print_statement
     statement_header
-    puts @date + ' || ' + @credit + ' || ' + @debit + ' || ' + @balance
+    return @date + ' || ' + @credit + ' || ' + @debit + ' || ' + @balance
   end
 
   private
