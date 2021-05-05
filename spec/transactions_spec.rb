@@ -2,18 +2,18 @@ require './lib/transactions'
 require 'date'
 
 describe Transactions do
-  let(:test_tran) { Transactions.new(Date.today, 1000.00, 50.00, 950.00) }
+  let(:test_transaction) { Transactions.new(Date.today, 1000.00, 50.00, 950.00) }
 
   it 'prints a date' do
-    expect(test_tran.date).to eq(Date.today)
+    expect(test_transaction.date).to eq(Date.today)
   end
   it 'prints deposit' do
-    expect(test_tran.credit).to eq(1000.00)
+    expect(test_transaction.credit).to eq(1000.00)
   end
   it 'prints withdraw' do
-    expect(test_tran.debit).to eq(50.00)
+    expect(test_transaction.debit).to eq(50.00)
   end
   it 'prints balance' do
-    expect(test_tran.balance).to eq(950.00)
+    expect(test_transaction.balance).to eq(950.00)
   end
 end

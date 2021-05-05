@@ -1,3 +1,4 @@
+require './lib/statement'
 
 class BankAcc
 
@@ -17,5 +18,10 @@ class BankAcc
 
   def withdraw(amount)
     @balance = @balance - amount
+  end
+
+  def print_statement
+    statement_format = Statement.new
+    statement_format.print_statement
   end
 end
