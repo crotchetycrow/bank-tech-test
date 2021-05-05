@@ -20,6 +20,8 @@ As a Client
 So that I can check my statement
 I want to be able to print my account statement
 
+~ a comment to add: credit is to add amount, debit is to take away amount, will need to make adjustments to Transactions class
+
 As a Client
 So I can see the most recent transactions first
 I want the statements to be in reverse chronological order
