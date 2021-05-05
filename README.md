@@ -101,11 +101,26 @@ User story 5:
 
   Is this what I want?
 
+  Another IRB test with my print_statement method (the one in BankAcc class) shows that my initialize method might not work the way I intend it to because it requires 4 arguments. I also should write a test for that.
+
+What I want to achieve here is when BankAcc.print_statement is called it should return effectively what the print_statement in the Statement class is doing.
+
+
+
 User story 1:
 
     Just realised @balance should probably be stored in an array? I'll try that out.
         Nope. @balance is fine, I think I need to store my transactions in an array.
     
+    My Transaction class is going to be used later on in a BankAcc class method which generates a new transaction and store it within a BankAcc object (or something like that).
+
+    I just had a thought that I could call my Transaction class, store it in an array and then call that in my (BankAcc) print_statement method and return that?
+
+# Considerations
+
+    - I haven't done any modelling
+    
+    - I haven't done any Mocking
 
 ----------------------------------
 # Bank tech test
