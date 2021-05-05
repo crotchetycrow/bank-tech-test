@@ -72,7 +72,14 @@ User story 5:
             @balance = balance
           end
 
-  Not sure that's what I want
+  Not sure that's what I want. TypeError (expected numeric) - this is because of Date.today
+
+  Maybe my print_statement method needs an argument like I had previously toyed with? That way I could iterate over it and extract the date, credit, debit and balance? But then what... Although I'm not sure why my initialize method isn't working.
+
+      -Resolved by explicitly converting my instance variables to_s
+
+  Now my issue is that rb:18 of statement_spec is returning nil...
+
 
 User story 1:
 
