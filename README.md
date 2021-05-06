@@ -1,3 +1,7 @@
+# Installation
+
+
+
 # User Stories
 
 1.
@@ -32,89 +36,7 @@ As a Client
 So I can see the most recent transactions first
 I want the statements to be in reverse chronological order
 
-# Comments
-
-User story 5:
-
-    We would need to include a print_statement method...
-
-    Would this need to take an argument? Something like an account number?
-
-          def print_statement(account_number)
-
-          end
-
-          - Not sure it would, because we'd be calling this on an already existing account
-
-    That account_number would be the local memory of recent transactions.
-    Not sure how I would write that just yet.
-
-    I'd obviously need to write out the expected format so whatever was in
-    the README. Private method because when I link this with BankAcc we don't
-    need it accessing that method
-
-          def statement_top
-            puts date || credit || debit || balance
-          end
-
-    Slight issue with the test for print_statement. I guess I want this test to print what I want in my statement which is the header and transaction. So perhaps I need to create each element and shove that in a test?
-
-    I've laied out my test with exactly what I want but print_statement is returning nil..It should be returning my statement_header at the very least. Seeing as my test wants test_account.print_statement to match full_statement, I'm going to basically add test_transaction to my print_statement method and see what it returns.
-
-    Added initialize method similar to Transactions class
-
-          attr_reader :date, :credit, :debit, :balance
-
-          def initialize(date, credit, debit, balance)
-            @date = Date.today
-            @credit = credit
-            @debit = debit
-            @balance = balance
-          end
-
-  Not sure that's what I want. TypeError (expected numeric) - this is because of Date.today
-
-  Maybe my print_statement method needs an argument like I had previously toyed with? That way I could iterate over it and extract the date, credit, debit and balance? But then what... Although I'm not sure why my initialize method isn't working.
-
-      -Resolved by explicitly converting my instance variables to_s
-
-  Now my issue is that rb:18 of statement_spec is returning nil...
-
-  IRB test shows that it isn't exactly returning nil:
-      
-      3.0.0 :006 > statement = Statement.new(Date.today, 1000, '', 1000)
-
-      => #<Statement:0x00007faf7d1326b0 @date="2021-05-05", @credit="1000", @debit="", @balance="1000"> 
-
-      3.0.0 :007 > statement.print_statement
-
-      date || credit || debit || balance
-      2021-05-05 || 1000 ||  || 1000
-      => nil 
-
-  Oookay, by adding return instead of puts it has passed my test, but I'm not convinced. I'll check in irb but I might have to alter my test?
-
-  IRB shows that statement.print_statement outputs the following
-
-          date || credit || debit || balance
-          => "2021-05-05 || 1000 ||  || 1000"
-
-  Is this what I want?
-
-  Another IRB test with my print_statement method (the one in BankAcc class) shows that my initialize method might not work the way I intend it to because it requires 4 arguments. I also should write a test for that.
-
-What I want to achieve here is when BankAcc.print_statement is called it should return effectively what the print_statement in the Statement class is doing.
-
-
-
-User story 1:
-
-    Just realised @balance should probably be stored in an array? I'll try that out.
-        Nope. @balance is fine, I think I need to store my transactions in an array.
-    
-    My Transaction class is going to be used later on in a BankAcc class method which generates a new transaction and store it within a BankAcc object (or something like that).
-
-    I just had a thought that I could call my Transaction class, store it in an array and then call that in my (BankAcc) print_statement method and return that?
+# Moving the comments section to a new .md file called NOTES.md
 
 # Considerations
 

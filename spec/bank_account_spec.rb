@@ -25,11 +25,11 @@ describe BankAcc do
     end
   end
 
-  describe '#print_statement' do
-    it 'prints a statement with the balance' do
-      account.deposit(1000.00)
-      account.print_statement
-      expect(account.print_statement).to match test_statement
-    end
-  end
+  # describe '#print_statement' do
+  #   it 'prints a statement with the balance' do
+  #     account.deposit(1000.00)
+  #     account.print_statement
+  #     expect(account.print_statement).to match test_statement
+  #   end
+  # end
 end

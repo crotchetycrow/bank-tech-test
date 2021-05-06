@@ -10,9 +10,9 @@ class Statement
   #   @balance = balance.to_s
   # end
   
-  def print_statement
+  def print_statement(bank_statement)
     statement_header
-    return @date + ' || ' + @credit + ' || ' + @debit + ' || ' + @balance
+    bank_statement.each { |transaction| puts transaction.date + ' || ' + transaction.credit.to_s + ' || ' + transaction.debit.to_s + ' || ' + transaction.balance.to_s }
   end
 
   private
