@@ -1,6 +1,6 @@
 require './lib/statement'
 require './lib/bank_account'
-require './lib/transactions'
+require './lib/transaction'
 
 describe Statement do
 
@@ -8,7 +8,7 @@ describe Statement do
   let(:test_account) { BankAcc.new }
 
   let(:statement_top) { 'date || credit || debit || balance\n' }
-  let(:test_transaction) { Transactions.new(Date.today, 1000.00, 0.00, 1000.00) }
+  let(:test_transaction) { Transaction.new(Date.today, 1000.00, 0.00, 1000.00) }
 
   describe '#print_statement' do
     it 'returns the printed statement' do

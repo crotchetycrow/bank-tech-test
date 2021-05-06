@@ -1,8 +1,8 @@
-require './lib/transactions'
+require './lib/transaction'
 require 'date'
 
-describe Transactions do
-  let(:test_transaction) { Transactions.new(Date.today, 1000.00, 50.00, 950.00) }
+describe Transaction do
+  let(:test_transaction) { Transaction.new(Date.today, 1000.00, 50.00, 950.00) }
 
   it 'prints a date' do
     expect(test_transaction.date).to eq(Date.today)
